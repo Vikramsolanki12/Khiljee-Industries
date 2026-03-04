@@ -169,28 +169,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
-      <section className="bg-slate-500 py-20 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <FaAward className="mx-auto mb-6 text-blue-400" size={50} />
-          <h2 className="text-4xl font-bold mb-6">
-            ISO Certified Quality
-          </h2>
-          <p className="text-slate-300 mb-8">
-            Recognized for excellence in food safety and quality management.
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-6">
-            <div className="bg-slate-800 px-8 py-6 rounded-2xl border border-slate-700">
-              ISO 22000 – Food Safety
-            </div>
-            <div className="bg-slate-800 px-8 py-6 rounded-2xl border border-slate-700">
-              ISO 9001 – Quality Management
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 };
