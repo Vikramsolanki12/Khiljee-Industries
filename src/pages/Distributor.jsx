@@ -160,18 +160,69 @@ const Distributor = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
 
-              {Object.keys(formData).map((field) =>
-                field !== "message" ? (
-                  <Input
-                    key={field}
-                    label={field.replace("_", " ").toUpperCase()}
-                    name={field}
-                    value={formData[field]}
-                    onChange={handleChange}
-                    required={field !== "email"}
-                  />
-                ) : null
-              )}
+              {Object.keys(formData).map((field) => {
+  if (field === "business_type") {
+    return (
+      <div key={field}>
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          BUSINESS TYPE *
+        </label>
+        <select
+          name="business_type"
+          value={formData.business_type}
+          onChange={handleChange}
+          required
+          className="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600"
+        >
+          <option value="">Select Business Type</option>
+          <option value="Wholesaler">Wholesaler</option>
+          <option value="Retailer">Retailer</option>
+          <option value="Super Market">Super Market</option>
+          <option value="Distributor">Distributor</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    );
+  }
+
+  if (field === "experience") {
+    return (
+      <div key={field}>
+        <label className="block text-sm font-medium text-slate-700 mb-2">
+          EXPERIENCE *
+        </label>
+        <select
+          name="experience"
+          value={formData.experience}
+          onChange={handleChange}
+          required
+          className="w-full p-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-600"
+        >
+          <option value="">Select Experience</option>
+          <option value="0-2 years">0-2 years</option>
+          <option value="3-5 years">3-5 years</option>
+          <option value="6-10 years">6-10 years</option>
+          <option value="10+ years">10+ years</option>
+        </select>
+      </div>
+    );
+  }
+
+  if (field !== "message") {
+    return (
+      <Input
+        key={field}
+        label={field.replace("_", " ").toUpperCase()}
+        name={field}
+        value={formData[field]}
+        onChange={handleChange}
+        required={field !== "email"}
+      />
+    );
+  }
+
+  return null;
+})}
 
               <textarea
                 name="message"
