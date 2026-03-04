@@ -159,8 +159,6 @@ const Footer = () => {
         {/* ================= BADGES ================= */}
         <div className="mt-14 flex flex-wrap justify-center gap-4 text-xs text-gray-400">
           {[
-            "ISO 22000:2005 Certified",
-            "ISO 9001:2015 Certified",
             "100% Whole Wheat",
             "Made in India 🇮🇳",
           ].map((badge, index) => (
