@@ -26,11 +26,6 @@ const Home = () => {
       title: "High Fiber",
       description: "Rich in fiber and essential nutrients for healthy living",
     },
-    {
-      icon: <FaCertificate size={32} />,
-      title: "ISO Certified",
-      description: "ISO 22000 & ISO 9001 certified manufacturing",
-    },
   ];
 
   // ✅ Slider Images
